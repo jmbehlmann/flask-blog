@@ -3,7 +3,7 @@ from forms import RegistrationForm, LoginForm
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = ''
+app.config['SECRET_KEY'] = '1'
 
 posts = [
     {
@@ -36,7 +36,7 @@ def register():
     form = RegistrationForm()
     return render_template('register.html', title='Register', form=form)
 
-@app.route("/login  ")
+@app.route("/login")
 def login():
     form = LoginForm()
     return render_template('login.html', title='Login', form=form)
